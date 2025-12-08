@@ -39,14 +39,21 @@ The walkability index was calculated for each H3 hexagon by combining accessibil
 
 ### Data sources
 
-- District boundaries (https://www.data.gv.at/datasets/4f18ca71-38e9-4d55-9064-bc5085a50608?locale=de)
-- Population statistic (https://www.graz.at/cms/beitrag/10034466/7772565/Zahlen_Fakten_Bevoelkerung_Bezirke_Wirtschaft.html)
-- POIs and walking network (OpenStreetMap via OSMnx)
-- Green and blue spaces (https://land.copernicus.eu/en/products/urban-atlas?tab=land_coverland_use)
+- District boundaries (Overpass Turbo (n.d.). Overpass API web interface. https://overpass-turbo.eu/ (Accessed December 2, 2025))
+- Overpass Code for district boundaries:
+  [out:json][timeout:25];
+  area["name"="Graz"]->.g;
+  relation(area.g)["boundary"="administrative"]["admin_level"="10"];
+  out geom;
 
+- Population statistic (Stadt Graz (2025). Zahlen + Fakten: Bevölkerung, Bezirke, Wirtschaft, Geografie.                                                             https://www.graz.at/cms/beitrag/10034466/7772565/Zahlen_Fakten_Bevoelkerung_Bezirke_Wirtschaft.html (Accessed December 2, 2025))
+
+- POIs and walking network (OpenStreetMap via OSMnx)
+
+- Green and blue spaces (Copernicus Land Monitoring Service (n.d.). Urban Atlas Land Cover / Land Use 2018 (vector). https://land.copernicus.eu/en/products/urban-   atlas/urban-atlas-2018 (Accessed December 2, 2025))
 
 **Packages used**
-Geopandas, Pandas, NumPy, OSMnx, NetworkX, h3, Matplotlib, Shapely
+Geopandas, Pandas, NumPy, OSMnx, NetworkX, h3, Matplotlib, Shapely, Fiona, Rasterio, KeplerGl
 
 **Authors**
 Paul Badin, Bernadette Kakuska, Elias Pfleger, Clemens Wallisch
