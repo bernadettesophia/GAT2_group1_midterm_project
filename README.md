@@ -5,6 +5,8 @@
 **Authors:**
 Paul Badin, Bernadette Kakuska, Elias Pfleger, Clemens Wallisch
 
+**Date:**
+13.12.2025
 
 ## Walkability Assessment of Graz, Austria
 
@@ -63,7 +65,13 @@ All spatial data were projected to EPSG:32633 (WGS 84 / UTM zone 33N) for analys
 
 ### Data sources
 
-- District boundaries (Overpass Turbo (n.d.). Overpass API web interface. https://overpass-turbo.eu/ (Accessed December 2, 2025))
+- Course GIS analysis techniques 2 VU (25W, GST.200UB)
+
+- DEM (OpenTopography (n.d.). Copernicus GLO-30 Digital Elevation Model. https://portal.opentopography.org/raster?opentopoID=OTSDEM.032021.4326.3. (Accessed December 2, 2025))
+
+- District boundaries (Overpass Turbo) (n.d.). Overpass API web interface. https://overpass-turbo.eu/. (Accessed December 2, 2025)
+
+- Green and blue spaces (Copernicus Land Monitoring Service (n.d.). Urban Atlas Land Cover / Land Use 2018 (vector). https://land.copernicus.eu/en/products/urban-atlas/urban-atlas-2018. (Accessed December 2, 2025))
   
 - Overpass Code for district boundaries:
 
@@ -73,16 +81,13 @@ All spatial data were projected to EPSG:32633 (WGS 84 / UTM zone 33N) for analys
   relation(area.g)["boundary"="administrative"]["admin_level"="10"];
   out geom;
 
-- Population statistic (Stadt Graz (2025). Zahlen + Fakten: Bevölkerung, Bezirke, Wirtschaft, Geografie. https://www.graz.at/cms/beitrag/10034466/7772565/Zahlen_Fakten_Bevoelkerung_Bezirke_Wirtschaft.html (Accessed December 2, 2025))
-
 - POIs and walking network (OpenStreetMap via OSMnx)
 
-- Green and blue spaces (Copernicus Land Monitoring Service (n.d.). Urban Atlas Land Cover / Land Use 2018 (vector). https://land.copernicus.eu/en/products/urban-atlas/urban-atlas-2018 (Accessed December 2, 2025))
-  
-- DEM (OpenTopography (n.d.). Copernicus GLO-30 Digital Elevation Model. https://portal.opentopography.org/raster?opentopoID=OTSDEM.032021.4326.3
-  (Accessed December 2, 2025))
+- Population statistic (Stadt Graz) (2025). Zahlen + Fakten: Bevölkerung, Bezirke, Wirtschaft, Geografie. https://www.graz.at/cms/beitrag/10034466/7772565/Zahlen_Fakten_Bevoelkerung_Bezirke_Wirtschaft.html. (Accessed December 2, 2025))
 
-- Course GIS analysis techniques 2 VU (25W, GST.200UB)
+
+
+
 
 
 
