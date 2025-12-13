@@ -1,5 +1,11 @@
 # GAT2_group1_midterm_project
 
+
+
+**Authors:**
+Paul Badin, Bernadette Kakuska, Elias Pfleger, Clemens Wallisch
+
+
 ## Walkability Assessment of Graz, Austria
 
 This project evaluates the walkability of Graz, Austria using a GIS-based methodology based on the paper:
@@ -37,30 +43,46 @@ The goal was to construct a walkability index by combining:
 
 The walkability index was calculated for each H3 hexagon by combining accessibility score (daily and leisure perspective) and environmental score.
 
+All spatial data were projected to EPSG:32633 (WGS 84 / UTM zone 33N) for analysis. Raw datasets in other CRSs (e.g., GeoJSON, DEM, OSM) were reprojected as needed.
+
+### Software & Dependencies
+
+- Python 3.11
+- geopandas 1.1.1
+- pandas 2.3.3
+- numpy 2.3.5
+- osmnx 2.0.7
+- networkx 3.6
+- h3 4.3.1
+- matplotlib 3.10.7
+- shapely 2.1.2
+- fiona (via geopandas)
+- rasterio 1.4.3
+- pyproj 3.7.2
+- keplergl 0.3.2
+
 ### Data sources
 
 - District boundaries (Overpass Turbo (n.d.). Overpass API web interface. https://overpass-turbo.eu/ (Accessed December 2, 2025))
   
 - Overpass Code for district boundaries:
+
+  ```overpass
   [out:json][timeout:25];
   area["name"="Graz"]->.g;
   relation(area.g)["boundary"="administrative"]["admin_level"="10"];
   out geom;
 
-- Population statistic (Stadt Graz (2025). Zahlen + Fakten: Bevölkerung, Bezirke, Wirtschaft, Geografie.                                                             https://www.graz.at/cms/beitrag/10034466/7772565/Zahlen_Fakten_Bevoelkerung_Bezirke_Wirtschaft.html (Accessed December 2, 2025))
+- Population statistic (Stadt Graz (2025). Zahlen + Fakten: Bevölkerung, Bezirke, Wirtschaft, Geografie. https://www.graz.at/cms/beitrag/10034466/7772565/Zahlen_Fakten_Bevoelkerung_Bezirke_Wirtschaft.html (Accessed December 2, 2025))
 
 - POIs and walking network (OpenStreetMap via OSMnx)
 
-- Green and blue spaces (Copernicus Land Monitoring Service (n.d.). Urban Atlas Land Cover / Land Use 2018 (vector). https://land.copernicus.eu/en/products/urban-   atlas/urban-atlas-2018 (Accessed December 2, 2025))
+- Green and blue spaces (Copernicus Land Monitoring Service (n.d.). Urban Atlas Land Cover / Land Use 2018 (vector). https://land.copernicus.eu/en/products/urban-atlas/urban-atlas-2018 (Accessed December 2, 2025))
   
 - DEM (OpenTopography (n.d.). Copernicus GLO-30 Digital Elevation Model. https://portal.opentopography.org/raster?opentopoID=OTSDEM.032021.4326.3
   (Accessed December 2, 2025))
 
-**Packages used**
-Geopandas, Pandas, NumPy, OSMnx, NetworkX, h3, Matplotlib, Shapely, Fiona, Rasterio, KeplerGl
-
-**Authors**
-Paul Badin, Bernadette Kakuska, Elias Pfleger, Clemens Wallisch
+- Course GIS analysis techniques 2 VU (25W, GST.200UB)
 
 
 
