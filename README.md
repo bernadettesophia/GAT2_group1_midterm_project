@@ -40,6 +40,7 @@ The walkability index was calculated for each H3 hexagon by combining accessibil
 ### Data sources
 
 - District boundaries (Overpass Turbo (n.d.). Overpass API web interface. https://overpass-turbo.eu/ (Accessed December 2, 2025))
+  
 - Overpass Code for district boundaries:
   [out:json][timeout:25];
   area["name"="Graz"]->.g;
@@ -51,6 +52,9 @@ The walkability index was calculated for each H3 hexagon by combining accessibil
 - POIs and walking network (OpenStreetMap via OSMnx)
 
 - Green and blue spaces (Copernicus Land Monitoring Service (n.d.). Urban Atlas Land Cover / Land Use 2018 (vector). https://land.copernicus.eu/en/products/urban-   atlas/urban-atlas-2018 (Accessed December 2, 2025))
+  
+- DEM (OpenTopography (n.d.). Copernicus GLO-30 Digital Elevation Model. https://portal.opentopography.org/raster?opentopoID=OTSDEM.032021.4326.3
+  (Accessed December 2, 2025))
 
 **Packages used**
 Geopandas, Pandas, NumPy, OSMnx, NetworkX, h3, Matplotlib, Shapely, Fiona, Rasterio, KeplerGl
